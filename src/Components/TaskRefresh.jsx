@@ -1,7 +1,7 @@
 import React from 'react'
 import { CiEdit } from "react-icons/ci";
 
-export const TodoUpdate = () => {
+export const TaskRefresh = () => {
     return (
         <>
             <form action="">

@@ -1,10 +1,10 @@
 import React from 'react'
 
-export const TodoAdd = () => {
+export const TaskForm = () => {
     return (
         <>
             <form action="">
-                <input type="text" className='input-add' name="description" value="Aprender" placeholder='¿Que necesitas hacer?'/>
+                <input type="text" className='input-add' name="description" value="Aprender" placeholder='¿Que necesitas recordar?'/>
                 <button className='btn-add' type='submit'>Agregar</button>
             </form>
         </>
