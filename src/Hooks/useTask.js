@@ -4,6 +4,11 @@ import { taskReducer } from '../taskReducer';
 export const useTask = () => {
 	const initialState = []; //Se define el initialState como un array vacio
 
+    //Se crea una función init para que devuelva las tareas almacenadas en el localStorage o bien un array vacío si no hay tareas 
+    const init = () => {
+        return JSON.parse(localStorage.getItem('tareas')) || []
+    } 
+    
     //Se utiliza el hook useReducer para manejar el estado de la lista de tareas
 	const [tareas, dispatch] = useReducer(
 		taskReducer,
@@ -19,10 +24,6 @@ export const useTask = () => {
         localStorage.setItem('tareas', JSON.stringify(tareas))
     }, [tareas])
 
-    //Se crea una función init para que devuelva las tareas almacenadas en el localStorage o bien un array vacío si no hay tareas 
-    const init = () => {
-        return JSON.parse(localStorage.getItem('tareas')) || []
-    } 
 
 	const handleNuevaTarea = tarea => {
 		const action = {

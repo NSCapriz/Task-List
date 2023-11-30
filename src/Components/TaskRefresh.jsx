@@ -1,4 +1,5 @@
 import React from 'react'
+//Se importa icon de react icon
 import { CiEdit } from "react-icons/ci";
 
 export const TaskRefresh = () => {
