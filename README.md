@@ -1,8 +1,19 @@
-# React + Vite
+# Task List Project 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![logo](/src/assets/lista.png "Logo Project") ---> Link del proyecto (https://github.com/NSCapriz/Task-List.git)
 
-Currently, two official plugins are available:
+* Descripción:<br>
+	*Es un proyecto que representa una Task-List.*
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* Tecnologías utilizadas:<br>
+	- Se utilizó el leguaje de programación de **Javascript** y el framework **React** para la creación de componentes y **Vite**.
+	- Se utilizó **CSS** y se instaló framework **Bootstrap** para darle estilo al proyecto.
+
+    ![logos](https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/168570351/original/fe86a10c5f53958c74f92bb8befe4d0c3b6ee10c/do-html-css-javascript-ajax-reactjs-psd-html-jquery.png)
+
+
+* Autor del proyecto:
+	**Nicolás Sebastián Capriz**
+
+* Estado del proyecto:
+	**Termidado**

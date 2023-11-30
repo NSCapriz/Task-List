@@ -3,18 +3,28 @@ import { TaskRefresh } from './TaskRefresh';
 //Se importa icono de react icon
 import { TiDeleteOutline } from "react-icons/ti";
 
-export const TaskItem = () => {
+export const TaskItem = ({
+    tarea,
+    handleBorrarTarea,
+    handleCompletarTarea,
+    handleActualizarTarea
+}) => {
     return (
         <>
-        <li>
-            <span>
-                <label htmlFor="" className='container-done'></label>
-            </span>
-            <TaskRefresh/>
-            <button className="btn-delete">
-                <TiDeleteOutline />
-            </button>
-        </li>
+            <li>
+                <span onClick={() => handleCompletarTarea(tarea.id)}>
+                    <label
+                        className={`container-done ${tarea.done ? 'active' : ''}`}
+                    ></label>
+                </span>
+                <TaskRefresh tarea={tarea} handleActualizarTarea={handleActualizarTarea} />
+                <button
+                    className='btn-delete'
+                    onClick={() => handleBorrarTarea(tarea.id)}
+                >
+                    <TiDeleteOutline />
+                </button>
+            </li>
         </>
     )
 }

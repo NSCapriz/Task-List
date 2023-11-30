@@ -1,10 +1,199 @@
-#root {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--violeta: #9a18ba;
+	--celeste: #00AFA3;
+	--celeste-hover: #5E7BBD;
+	--rojo-hover: #e5383b;
+	--verde: #61be53;
 }
 
 body {
-  max-width: 1200px;
-  margin: 50px auto;
+	font-family: 'Space Mono', monospace;
+	max-width: 1200px;
+	margin: 40px auto;
+	display: flex;
+	justify-content: center;
+  background-image: url(./assets/anotar-tarea.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #1B3D2F;
+}
+
+.card-tareas {
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.411);
+	padding: 25px;
+	border-radius: 20px;
+	width: 700px;
+  background: linear-gradient(rgba(156, 164, 182, 0.171), rgba(192, 198, 209, 0.137));
+  backdrop-filter: blur(2px);
+}
+
+h1 {
+	text-align: center;
+  font-weight: bold;
+  font-size: 2rem;
+  color:#69ac90;
+}
+
+h3 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: #bd6a0b;
+}
+
+.counter-tareas {
+	margin: 40px 0;
+	display: flex;
+	justify-content: space-around;
+}
+
+.counter-tareas h2{
+	font-weight: 600;
+  font-size: 1.8rem;
+}
+
+.counter-tareas span {
+	color: #000000;
+	font-weight: 700;
+	font-size: 24px;
+	margin-left: 10px;
+}
+
+ul {
+	margin-top: 50px;
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+ul li {
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 20px;
+}
+
+ul li span {
+	overflow: hidden;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+}
+
+ul li form {
+	flex: 1;
+	display: flex;
+	justify-content: space-between;
+}
+
+.input-update {
+  border: solid 1px white;
+	border-radius: 25px;
+	font-weight: 500;
+	font-family: inherit;
+	font-size: 18px;
+	color: #555;
+	width: 100%;
+	outline: none;
+}
+
+.container-done {
+	background-color: white;
+	width: 24px;
+	height: 24px;
+	border-radius: 20px;
+	border: 2px solid var(--verde);
+	cursor: pointer;
+}
+
+.container-done.active {
+	background-color: var(--verde);
+}
+
+.text-decoration-dashed {
+	text-decoration: line-through var(--rojo-hover) 2px;
+}
+
+.btn-delete {
+	background-color: var(--violeta);
+	color: #fff;
+	padding: 15px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: none;
+	border-radius: 50%;
+	transition: all 0.3s;
+	cursor: pointer;
+	font-family: inherit;
+}
+
+.btn-delete:hover {
+	background-color: var(--rojo-hover);
+}
+
+.btn-edit {
+	background-color: var(--celeste);
+	color: #fff;
+	padding: 15px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: none;
+	border-radius: 50%;
+	transition: all 0.3s;
+	cursor: pointer;
+	font-family: inherit;
+}
+
+.btn-edit:hover {
+	background-color: var(--celeste-hover);
+}
+
+form {
+	display: flex;
+	gap: 20px;
+}
+
+.agregar-tarea h2{
+	text-align: center;
+	margin-bottom: 40px;
+	font-size: 24px;
+}
+
+.input-agregar{
+	border: none;
+	outline: none;
+	padding: 10px 20px;
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+	border-radius: 15px;
+	flex: 1;
+	font-family: inherit;
+	font-size: 17px;
+	color: #555;
+}
+
+.btn-agregar {
+	border: none;
+	background-color: var(--celeste);
+	color: #fff;
+	padding: 5px 40px;
+	border-radius: 20px;
+	font-family: inherit;
+	cursor: pointer;
+	font-size: 17px;
+}
+
+.btn-agregar:hover {
+	background-color: var(--celeste-hover);
 }

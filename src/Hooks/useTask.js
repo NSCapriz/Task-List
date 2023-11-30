@@ -1,5 +1,6 @@
 import { useEffect, useReducer } from 'react';
 import { taskReducer } from '../taskReducer';
+import Swal from 'sweetalert2'
 
 export const useTask = () => {
 	const initialState = []; //Se define el initialState como un array vacio
@@ -39,7 +40,10 @@ export const useTask = () => {
 			type: 'Borrar Tarea',
 			payload: id,
 		};
-
+		Swal.fire('Acabas de borrar una tarea de tu lista!', 'Recuerda presionar F5 para guardar los cambios');
+		Swal.update({
+			icon: 'warning'
+		})
 		dispatch(action);
 	};
 
@@ -48,7 +52,10 @@ export const useTask = () => {
 			type: 'Tarea Completa',
 			payload: id,
 		};
-
+		Swal.fire('Has completado una Tarea!', 'Recuerda presionar F5 para guardar tus cambios')
+        Swal.update({
+            icon: 'success'
+        })
 		dispatch(action);
 	};
 

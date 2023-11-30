@@ -24,19 +24,19 @@ export const TaskForm = () => { //Se pasa función como una prop al componente
             done: false,
         };
 
-        handleNuevaTarea(nuevaTarea);
-        onResetForm();
-        Swal.fire('Has agregado una nueva tarea a tu lista de tareas!')
+        Swal.fire('Has agregado una nueva tarea a tu lista de tareas!', 'Presiona F5 para guardar tus cambios')
         Swal.update({
             icon: 'success'
         })
+        handleNuevaTarea(nuevaTarea);
+        onResetForm();
     };
 
     return (
         <form onSubmit={onFormSubmit}>
-            <input type='text' className='input-add' name='description' value={description} onChange={onInputChange} placeholder='¿Que necesitas recordar?' />
+            <input type='text' className='input-agregar' name='description' value={description} onChange={onInputChange} placeholder='¿Que debes hacer?' />
 
-            <button className='btn-add' type='submit'>
+            <button className='btn-agregar' type='submit'>
                 Nueva Tarea
             </button>
         </form>
